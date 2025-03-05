@@ -30,12 +30,26 @@ void moverBispo(int movimentos){
     }
 }
 
+//Função com a estrutra aninhada usando For e While utilizada para simular a movimentação do Cavalo em L
+void moverCavalo(int movimento1, int movimento2){
+    printf("\nMovendo o Cavalo:\n");
+    for (int i = movimento1; i == 1; i--){ //Movimentação Horizontal do cavalo
+        while (movimento2 != 0){ //Movimentação Vertical do cavalo
+            printf("Baixo v\n");
+            movimento2--;
+        }
+       printf("<--- Esquerda\n");
+    }
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Declaração de variáveis constantes para representar o número de casas que cada peça pode se mover.
     const int movimentosBispo = 5;
     const int movimentoTorre = 5;
     const int movimentoRainha = 8;
+    const int movimentoCavaloBaixo = 2;
+    const int movimentoCavaloEsquerda = 1;
     
     // Implementação de Movimentação do Bispo
     moverBispo(movimentosBispo);
@@ -45,8 +59,7 @@ int main() {
     moverRainha(movimentoRainha);
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    moverCavalo(movimentoCavaloEsquerda, movimentoCavaloBaixo);
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
